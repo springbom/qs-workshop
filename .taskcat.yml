@@ -2,32 +2,12 @@ project:
   name: qs-workshop
   regions:
   - us-east-1
-  - us-west-2
-  - eu-central-1
+  - ap-northeast-2
 tests:
   default:
     template: ./templates/master.template.yaml
     regions:
     - us-east-1
-
-    
-    parameters:
-      AvailabilityZones: "$[taskcat_getaz_2]"
-      EmailAddress: kyeonjoo@amazon.com
-      KeyPairName: dev-virginia
-      WebserverCIDR: "0.0.0.0/0"
-      QSS3KeyPrefix: "qs-workshop/"
-      QSS3BucketName: "$[taskcat_autobucket]"
-
-    
-    parameters:
-      AvailabilityZones: "$[taskcat_getaz_2]"
-      EmailAddress: kyeonjoo@amazon.com 
-      KeyPairName: dev-virginia
-      WebserverCIDR: "0.0.0.0/0"
-      QSS3KeyPrefix: "qs-workshop/"
-      QSS3BucketName: "$[taskcat_autobucket]"
-
     
     parameters:
       AvailabilityZones: "$[taskcat_getaz_2]"
